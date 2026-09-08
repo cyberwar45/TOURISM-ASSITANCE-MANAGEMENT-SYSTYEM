@@ -1,10 +1,174 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TripAway — Travel beautifully</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"></head><body>
-<header id="header"><a class="brand" href="#home"><i>✦</i> TRIPAWAY</a><nav><a href="#discover">Explore</a><a href="#journey">Journeys</a><a href="#appdemo">App demo</a><a href="#contact">Contact</a></nav><button class="sign" id="signIn">Sign in <i>↗</i></button></header>
-<main><section class="hero" id="home"><div class="hero-img"></div><div class="shade"></div><div class="hero-copy reveal"><p class="kicker light">A DIFFERENT KIND OF GETAWAY · 2026</p><h1>Let wonder<br><em>lead the way.</em></h1><p>The places that change you are closer than you think. Discover them with a guide built for curious travellers.</p><div><a class="button gold" href="#discover">Start exploring <span>↓</span></a><a class="hero-link" href="#appdemo">See the app demo <span>→</span></a></div></div><div class="featured"><small>FEATURED ESCAPE</small><b>Hawa Mahal, Jaipur</b></div></section>
-<section class="intro shell" id="journey"><div class="reveal"><p class="kicker">YOUR NEXT CHAPTER</p><h2>Not just a trip. <em>A collection of moments</em> that stay with you.</h2></div><div class="intro-grid"><figure class="reveal"><img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=85" alt="Gateway of India"><figcaption>MUMBAI / 18.9220° N</figcaption></figure><div class="copy reveal"><p>TripAway brings together the texture of a city—the first chai of the morning, a hidden courtyard, the best seat at dusk—and makes it effortlessly yours.</p><a href="#discover">Explore our guide ↗</a></div></div></section>
-<section class="discover shell" id="discover"><div class="section-head reveal"><div><p class="kicker">CURATED FOR YOU</p><h2>Find the feeling<br>you came for.</h2></div><p>Search the places that make a destination unforgettable, from landmark moments to tables locals return to.</p></div><form id="searchForm" class="search reveal"><label>WHERE TO?<input id="city" placeholder="Jaipur, Mumbai, Delhi…"></label><label>WHAT ARE YOU LOOKING FOR?<select id="kind"><option value="">All experiences</option><option value="Landmark">Landmarks & culture</option><option value="Stay">Beautiful stays</option><option value="Food">Food & drink</option></select></label><button>→</button></form><p id="searchStatus" class="status">Choose a city and we’ll bring its best stories to the surface.</p><div class="cities" id="cities"><button class="city jaipur" data-city="Jaipur"><small>01 / PINK CITY</small><strong>Jaipur</strong><span>Palaces, colour & craft <i>→</i></span></button><button class="city mumbai" data-city="Mumbai"><small>02 / COASTAL</small><strong>Mumbai</strong><span>Salt air & old-world grandeur <i>→</i></span></button><button class="city delhi" data-city="Delhi"><small>03 / HISTORIC</small><strong>Delhi</strong><span>Layers of time, alive today <i>→</i></span></button></div><div id="results" class="results"></div></section>
-<section class="route"><div class="route-inner reveal"><p class="kicker light">A DAY, WELL SPENT</p><h2>Make the route<br>your own.</h2><p>Move from a sunrise landmark to a late-night local table. Add the places that call to you, then carry your plan with you.</p><div class="map"><span></span><b class="a">08:00<br>Gateway</b><b class="b">13:30<br>Colaba</b><b class="c">19:15<br>Marine Drive</b></div><a class="button outline" href="#appdemo">Build an itinerary <span>→</span></a></div></section>
-<section class="app-demo shell" id="appdemo"><div class="demo-copy reveal"><p class="kicker">INTERACTIVE APP DEMO</p><h2>Take TripAway<br><em>with you.</em></h2><p>This is how a traveller uses TripAway: discover something special, save it to a trip, follow a simple plan, then share verified reviews and memories with the community.</p><div class="tabs"><button class="active" data-view="discover"><b>01</b> Discover</button><button data-view="saved"><b>02</b> Save a trip</button><button data-view="today"><b>03</b> Today’s plan</button><button data-view="review"><b>04</b> Video review</button><button data-view="community"><b>05</b> Community</button></div></div><div class="phone-box reveal"><div class="phone"><div class="notch"></div><div class="statusbar"><span>9:41</span><span>● ● ◔</span></div><div class="screen" id="screen"></div><div class="homebar"></div></div><p>Tap a mode to explore the demo.</p></div></section>
-<section class="planning shell"><div class="section-head reveal"><div><p class="kicker">YOUR TRAVEL DESK</p><h2>Plans with<br>room to wander.</h2></div><p>Save the sparks. Shape the days later. Your itinerary stays securely yours.</p></div><div class="plan-card reveal"><div><i>✦</i><h3>Keep your discoveries close.</h3><p>Create an account to build trips, add stops, and return to your favourite finds.</p></div><button class="button night" data-dialog>Start a trip <span>→</span></button></div></section>
-<section class="contact" id="contact"><div class="contact-image"><p class="kicker light">SAY HELLO</p><h2>Some journeys<br>start with a<br><em>conversation.</em></h2></div><div class="contact-form"><p>Have a question, a local tip, or a destination you’d love us to cover? We’re listening.</p><form id="contactForm"><input placeholder="Your name" required><input type="email" placeholder="Email address" required><textarea placeholder="Tell us what’s on your mind" required></textarea><button class="button gold">Send a note <span>→</span></button><p id="message" class="status"></p></form></div></section></main>
-<footer><a class="brand" href="#home"><i>✦</i> TRIPAWAY</a><p>Travel slowly. Notice everything.</p><span>© 2026</span></footer><dialog id="dialog"><button class="close">×</button><p class="kicker">YOUR TRIPAWAY</p><h2>Adventure<br><em>awaits.</em></h2><input placeholder="Email address"><input type="password" placeholder="Password"><button class="button night">Sign in <span>→</span></button></dialog><link rel="stylesheet" href="reviews.css"><link rel="stylesheet" href="community.css"><link rel="stylesheet" href="place-images.css"><script src="app.js"></script><script src="data.js"></script><script src="place-images.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>TripAway — Travel beautifully</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="header"><a class="brand" href="#home"><i>✦</i> TRIPAWAY</a>
+        <nav><a href="#discover" data-i18n="explore">Explore</a><a href="#journey" data-i18n="journeys">Journeys</a><a href="#appdemo" data-i18n="appDemo">App demo</a><a
+                href="#contact" data-i18n="contact">Contact</a></nav><div class="header-actions"><label class="language-picker" for="languageSelect"><span aria-hidden="true">文</span><select id="languageSelect" aria-label="Choose language"></select></label><button class="sign" id="signIn" data-i18n="signIn">Sign in <i>↗</i></button></div>
+    </header>
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-img"></div>
+            <div class="shade"></div>
+            <div class="hero-copy reveal">
+                <p class="kicker light">A DIFFERENT KIND OF GETAWAY · 2026</p>
+                <h1>Let wonder<br><em>lead the way.</em></h1>
+                <p>The places that change you are closer than you think. Discover them with a guide built for curious
+                    travellers.</p>
+                <div><a class="button gold" href="#discover">Start exploring <span>↓</span></a><a class="hero-link"
+                        href="#appdemo">See the app demo <span>→</span></a></div>
+            </div>
+            <div class="featured"><small>FEATURED ESCAPE</small><b>Hawa Mahal, Jaipur</b></div>
+        </section>
+        <section class="intro shell" id="journey">
+            <div class="reveal">
+                <p class="kicker">YOUR NEXT CHAPTER</p>
+                <h2>Not just a trip. <em>A collection of moments</em> that stay with you.</h2>
+            </div>
+            <div class="intro-grid">
+                <figure class="reveal"><img
+                        src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=85"
+                        alt="Gateway of India">
+                    <figcaption>MUMBAI / 18.9220° N</figcaption>
+                </figure>
+                <div class="copy reveal">
+                    <p>TripAway brings together the texture of a city—the first chai of the morning, a hidden courtyard,
+                        the best seat at dusk—and makes it effortlessly yours.</p><a href="#discover">Explore our guide
+                        ↗</a>
+                </div>
+            </div>
+        </section>
+        <section class="discover shell" id="discover">
+            <div class="section-head reveal">
+                <div>
+                    <p class="kicker">CURATED FOR YOU</p>
+                    <h2>Find the feeling<br>you came for.</h2>
+                </div>
+                <p>Search the places that make a destination unforgettable, from landmark moments to tables locals
+                    return to.</p>
+            </div>
+            <form id="searchForm" class="search reveal"><label>WHERE TO?<input id="city"
+                        placeholder="Jaipur, Mumbai, Delhi…"></label><label>WHAT ARE YOU LOOKING FOR?<select id="kind">
+                        <option value="">All experiences</option>
+                        <option value="Landmark">Landmarks & culture</option>
+                        <option value="Stay">Beautiful stays</option>
+                        <option value="Food">Food & drink</option>
+                    </select></label><button>→</button></form>
+            <p id="searchStatus" class="status">Choose a city and we’ll bring its best stories to the surface.</p>
+            <div class="cities" id="cities"><button class="city jaipur" data-city="Jaipur"><small>01 / PINK
+                        CITY</small><strong>Jaipur</strong><span>Palaces, colour & craft <i>→</i></span></button><button
+                    class="city mumbai" data-city="Mumbai"><small>02 / COASTAL</small><strong>Mumbai</strong><span>Salt
+                        air & old-world grandeur <i>→</i></span></button><button class="city delhi"
+                    data-city="Delhi"><small>03 / HISTORIC</small><strong>Delhi</strong><span>Layers of time, alive
+                        today <i>→</i></span></button></div>
+            <div id="results" class="results"></div>
+        </section>
+        <section class="route">
+            <div class="route-inner reveal">
+                <p class="kicker light">A DAY, WELL SPENT</p>
+                <h2>Make the route<br>your own.</h2>
+                <p>Move from a sunrise landmark to a late-night local table. Add the places that call to you, then carry
+                    your plan with you.</p>
+                <div class="map"><span></span><b class="a">08:00<br>Gateway</b><b class="b">13:30<br>Colaba</b><b
+                        class="c">19:15<br>Marine Drive</b></div><a class="button outline" href="#appdemo">Build an
+                    itinerary <span>→</span></a>
+            </div>
+        </section>
+        <section class="app-demo shell" id="appdemo">
+            <div class="demo-copy reveal">
+                <p class="kicker">INTERACTIVE APP DEMO</p>
+                <h2>Take TripAway<br><em>with you.</em></h2>
+                <p>This is how a traveller uses TripAway: discover something special, save it to a trip, follow a simple
+                    plan, then share verified reviews and memories with the community.</p>
+                <div class="tabs"><button class="active" data-view="discover"><b>01</b> <span data-i18n="discover">Discover</span></button><button
+                        data-view="saved"><b>02</b> <span data-i18n="saveTrip">Save a trip</span></button><button data-view="today"><b>03</b> <span data-i18n="todayPlan">Today’s
+                        plan</span></button><button data-view="review"><b>04</b> <span data-i18n="videoReview">Video review</span></button><button
+                        data-view="community"><b>05</b> <span data-i18n="community">Community</span></button><button
+                        data-view="translate"><b>06</b> <span data-i18n="translator">Travel translator</span></button></div>
+            </div>
+            <div class="phone-box reveal">
+                <div class="phone">
+                    <div class="notch"></div>
+                    <div class="statusbar"><span>9:41</span><span>● ● ◔</span></div>
+                    <div class="screen" id="screen"></div>
+                    <div class="homebar"></div>
+                </div>
+                <p>Tap a mode to explore the demo.</p>
+            </div>
+        </section>
+        <section class="planning shell">
+            <div class="section-head reveal">
+                <div>
+                    <p class="kicker">YOUR TRAVEL DESK</p>
+                    <h2>Plans with<br>room to wander.</h2>
+                </div>
+                <p>Save the sparks. Shape the days later. Your itinerary stays securely yours.</p>
+            </div>
+            <div class="plan-card reveal">
+                <div><i>✦</i>
+                    <h3>Keep your discoveries close.</h3>
+                    <p>Create an account to build trips, add stops, and return to your favourite finds.</p>
+                </div><button class="button night" data-dialog>Start a trip <span>→</span></button>
+            </div>
+        </section>
+        <section class="contact" id="contact">
+            <div class="contact-image">
+                <p class="kicker light">SAY HELLO</p>
+                <h2>Some journeys<br>start with a<br><em>conversation.</em></h2>
+            </div>
+            <div class="contact-form">
+                <p>Have a question, a local tip, or a destination you’d love us to cover? We’re listening.</p>
+                <form id="contactForm"><input placeholder="Your name" required><input type="email"
+                        placeholder="Email address" required><textarea placeholder="Tell us what’s on your mind"
+                        required></textarea><button class="button gold">Send a note <span>→</span></button>
+                    <p id="message" class="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer><a class="brand" href="#home"><i>✦</i> TRIPAWAY</a>
+        <p>Travel slowly. Notice everything.</p><span>© 2026</span>
+    </footer>
+    <dialog id="dialog"><button class="close">×</button>
+        <p class="kicker">YOUR TRIPAWAY</p>
+        <h2>Adventure<br><em>awaits.</em></h2><input placeholder="Email address"><input type="password"
+            placeholder="Password"><button class="button night">Sign in <span>→</span></button>
+    </dialog>
+    <dialog id="reviewDialog">
+        <button class="close" id="closeReview">×</button>
+        <p class="kicker">YOUR VERIFIED REVIEW</p>
+        <h2>Share the<br><em>moment.</em></h2>
+        <form id="reviewForm">
+            <label>PLACE VISITED<input id="reviewPlace" required value="Hawa Mahal, Jaipur"></label>
+            <label>YOUR RATING<select id="reviewRating" required><option value="5">★★★★★ — Loved it</option><option value="4">★★★★☆ — Great</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Needs work</option><option value="1">★☆☆☆☆ — Not for me</option></select></label>
+            <div class="review-capture">
+                <video id="reviewPreview" playsinline muted></video>
+                <p id="reviewCaptureStatus">Record up to 30 seconds, or choose a video from your device.</p>
+                <div class="review-actions"><button type="button" class="button night" id="startRecording">Use camera</button><button type="button" class="button capture-stop" id="stopRecording" disabled>Stop</button><label class="button upload">Choose video<input id="reviewUpload" type="file" accept="video/*"></label></div>
+            </div>
+            <button class="button gold review-submit" type="submit">Publish review <span>→</span></button>
+            <p id="reviewFormStatus" class="status" role="status"></p>
+        </form>
+    </dialog>
+    <link rel="stylesheet" href="reviews.css">
+    <link rel="stylesheet" href="community.css">
+    <link rel="stylesheet" href="place-images.css">
+    <script src="app.js"></script>
+    <script src="i18n.js"></script>
+    <script src="data.js"></script>
+    <script src="place-images.js"></script>
+</body>
+
+</html>
