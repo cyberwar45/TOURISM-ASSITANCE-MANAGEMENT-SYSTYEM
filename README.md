@@ -4,18 +4,28 @@ Interactive tourism website demo built with plain HTML, CSS, and JavaScript.
 
 ## Run locally
 
-Open `index.html` in a browser. No build tools, server, database, or API keys are required for the demo.
+Open `index.html` in a browser. No build tools or API keys are required. For app-shell offline support, serve the folder over HTTPS (or localhost): browsers do not allow service workers from `file://`.
 
 ## Included demo features
 
 - Destination search across India, including Coorg, Hampi, Gokarna, Ziro, Tawang, Mechuka, Majuli, Mandu, Orchha, Munnar, Kutch, and Dzukou Valley.
-- Place cards with images and offline-map/emergency-pack save action.
-- Interactive mobile app preview: discover, save a trip, daily itinerary, verified video review, and traveller community.
-- Client-side user video reviews with camera recording or video upload, preview, rating, and local published-review state.
-- AI-style itinerary planner demo that predicts a balanced day with nearby food, sightseeing, and explorer recommendations, with selectable trip styles.
+- Place cards with attraction-specific or experience-matched images.
+- Guest-browsable mobile app preview with consolidated Discover & map, My trips, Today’s plan, Community & reviews, Travel translator, and Currency converter sections. Sign-in is only a UI demo; no account is required.
+- Discover filters for category, indicative spend, and approximate distance from the city centre.
+- My trips builder with saved trip snapshots, shareable itinerary links, print-to-PDF, local INR budgets and expense splitting, a packing checklist, and locally stored travel document files.
+- App-shell service worker for static assets when hosted over HTTPS or localhost. Saved trips and checklists remain in browser storage; third-party maps, directions, and weather require internet. Map tiles are not cached.
+- Emergency information for India, including the national 112 number and outbound searches for hospitals, police, and embassy contacts. Verify local details; search results are not an emergency service directory.
+- Clearly identified outbound accommodation, transport, and ticket searches. TripAway does not process bookings or payments.
+- Open-Meteo current conditions and weather caution inside Today’s plan, with visible loading and unavailable states.
+- Offline currency converter for INR, USD, EUR, GBP, JPY, SGD, CAD, AUD, and CHF using fixed approximate reference rates. No network request is made; displayed amounts are estimates, not live market rates.
+- Community feed includes video reviews as a post type, with client-side camera recording or upload, preview, rating, and local published-review state.
+- Sample itinerary planner with selectable trip styles and city rotation.
+- Map demo with OpenStreetMap previews and Google Maps directions for planned stops. These external map services are not available offline.
 - Multilingual interface with 60+ selectable locales, saved language preference, and right-to-left layout support.
-- Traveler language-barrier support across all 68 language options, with an offline phrasebook, copy-to-clipboard, and language-aware text-to-speech speaker actions.
-- Contact and sign-in user interface demos.
+- Offline travel phrasebook with its own persistent language selector, plus speak and copy actions. Phrase translations are included for English, Hindi, Spanish, French, German, Arabic, Portuguese, Japanese, and Chinese.
+- Contact and sign-in interface demos.
+
+Travel document files are stored in IndexedDB on the current browser/device, not uploaded. The demo is not encrypted document storage; avoid using it as the only copy of important documents. It is not a real booking, authentication, or emergency-response service.
 
 ## GitHub upload
 

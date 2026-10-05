@@ -14,17 +14,3 @@
 .place-content {
     padding: 20px 24px 24px
 }
-
-.offline-pack {
-    border: 0;
-    background: #061a2d;
-    color: #fff;
-    padding: 9px 10px;
-    border-radius: 4px;
-    font: 600 .66rem var(--sans);
-    cursor: pointer
-}
-
-.offline-pack:disabled {
-    background: #80909c
-}

@@ -65,8 +65,8 @@
                         <option value="Landmark">Landmarks & culture</option>
                         <option value="Stay">Beautiful stays</option>
                         <option value="Food">Food & drink</option>
-                    </select></label><button>→</button></form>
-            <p id="searchStatus" class="status">Choose a city and we’ll bring its best stories to the surface.</p>
+                    </select></label><label>MAX EST. SPEND<select id="budgetFilter"><option value="">Any budget</option><option value="1000">Under ₹1,000</option><option value="3000">Under ₹3,000</option><option value="10000">Under ₹10,000</option></select></label><label>WITHIN DISTANCE<select id="distanceFilter"><option value="">Any distance</option><option value="5">Within 5 km</option><option value="10">Within 10 km</option><option value="25">Within 25 km</option></select></label><button>→</button></form>
+            <p id="searchStatus" class="status">Choose a city and filter places by type, estimated spend, or distance.</p>
             <div class="cities" id="cities"><button class="city jaipur" data-city="Jaipur"><small>01 / PINK
                         CITY</small><strong>Jaipur</strong><span>Palaces, colour & craft <i>→</i></span></button><button
                     class="city mumbai" data-city="Mumbai"><small>02 / COASTAL</small><strong>Mumbai</strong><span>Salt
@@ -90,13 +90,13 @@
             <div class="demo-copy reveal">
                 <p class="kicker">INTERACTIVE APP DEMO</p>
                 <h2>Take TripAway<br><em>with you.</em></h2>
-                <p>This is how a traveller uses TripAway: discover something special, save it to a trip, follow a simple
-                    plan, then share verified reviews and memories with the community.</p>
-                <div class="tabs"><button class="active" data-view="discover"><b>01</b> <span data-i18n="discover">Discover</span></button><button
-                        data-view="saved"><b>02</b> <span data-i18n="saveTrip">Save a trip</span></button><button data-view="today"><b>03</b> <span data-i18n="todayPlan">Today’s
-                        plan</span></button><button data-view="review"><b>04</b> <span data-i18n="videoReview">Video review</span></button><button
-                        data-view="community"><b>05</b> <span data-i18n="community">Community</span></button><button
-                        data-view="translate"><b>06</b> <span data-i18n="translator">Travel translator</span></button></div>
+                <p>This is how a traveller uses TripAway: browse as a guest, explore places on a map, manage trips and
+                    budgets, check weather and safety, and share travel stories.</p>
+                <div class="tabs"><button class="active" data-view="discover"><b>01</b> <span data-i18n="discoverMap">Discover & map</span></button><button
+                        data-view="trips"><b>02</b> <span data-i18n="myTrips">My trips</span></button><button data-view="today"><b>03</b> <span data-i18n="todayPlan">Today’s plan</span></button><button
+                        data-view="community"><b>04</b> <span data-i18n="community">Community & reviews</span></button><button
+                        data-view="translate"><b>05</b> <span data-i18n="translator">Travel translator</span></button><button
+                        data-view="currency"><b>06</b> <span data-i18n="currency">Currency converter</span></button></div>
             </div>
             <div class="phone-box reveal">
                 <div class="phone">
