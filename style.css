@@ -921,7 +921,8 @@ dialog::backdrop {
     }
 }
 
-.screen.trip-builder-screen {
+.screen.trip-builder-screen,
+.screen.budget-screen {
     overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: #c8c1b6 transparent;
@@ -1105,6 +1106,51 @@ dialog::backdrop {
     color: #667380;
     font-size: 8px;
     line-height: 1.4
+}
+
+.guest-import-banner {
+    margin: 12px;
+    padding: 12px;
+    border: 1px solid #d7c7a9;
+    border-radius: 12px;
+    background: #fffaf0;
+    color: #26394a;
+    font-size: 11px;
+    line-height: 1.5
+}
+
+.guest-import-banner > p {
+    margin: 6px 0
+}
+
+.guest-import-banner .guest-import-error {
+    color: #9a3529
+}
+
+.guest-import-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 9px
+}
+
+.guest-import-actions button {
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 7px;
+    background: #14324a;
+    color: #fff;
+    font: inherit;
+    cursor: pointer
+}
+
+.guest-import-actions button + button {
+    background: #e8e4dc;
+    color: #26394a
+}
+
+.guest-import-actions button:disabled {
+    cursor: wait;
+    opacity: .65
 }
 
 .screen.map-app-screen {
@@ -1400,8 +1446,45 @@ dialog::backdrop {
     font-size: 8px
 }
 
+.expense-list article {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: start;
+    column-gap: 8px;
+    row-gap: 3px;
+    padding: 9px 0
+}
+
+.expense-detail {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 2px
+}
+
+.expense-detail strong {
+    overflow-wrap: anywhere;
+    color: var(--n);
+    font: 700 14px/1.2 var(--sans)
+}
+
+.expense-detail span {
+    color: var(--m);
+    font: 500 11px/1.3 var(--sans)
+}
+
 .expense-list article b {
-    white-space: nowrap
+    align-self: end;
+    font: 600 10px/1.3 var(--sans);
+    text-align: right
+}
+
+.expense-list .expense-remove {
+    grid-column: 2;
+    grid-row: 1;
+    width: 26px;
+    height: 26px;
+    font-size: 15px
 }
 
 .expense-remove,
@@ -1538,6 +1621,37 @@ dialog::backdrop {
     color: #667380;
     font-size: 8px;
     line-height: 1.4
+}
+
+.auth-mode-toggle {
+    display: block;
+    margin: 12px 0;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: #a96d25;
+    font: 600 12px var(--sans);
+    cursor: pointer
+}
+
+#authForm label {
+    display: block;
+    margin: 12px 0 5px;
+    color: #667380;
+    font: 500 9px var(--mono);
+    letter-spacing: .06em
+}
+
+#authForm input {
+    display: block;
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #ddd5c8;
+    border-radius: 5px;
+    background: #fff;
+    color: #061a2d;
+    font: 14px var(--sans)
 }
 
 .map-discovery {

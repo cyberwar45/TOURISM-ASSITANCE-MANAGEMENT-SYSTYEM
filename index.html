@@ -91,12 +91,13 @@
                 <p class="kicker">INTERACTIVE APP DEMO</p>
                 <h2>Take TripAway<br><em>with you.</em></h2>
                 <p>This is how a traveller uses TripAway: browse as a guest, explore places on a map, manage trips and
-                    budgets, check weather and safety, and share travel stories.</p>
+                    expenses, check weather and safety, and share travel stories.</p>
                 <div class="tabs"><button class="active" data-view="discover"><b>01</b> <span data-i18n="discoverMap">Discover & map</span></button><button
-                        data-view="trips"><b>02</b> <span data-i18n="myTrips">My trips</span></button><button data-view="today"><b>03</b> <span data-i18n="todayPlan">Today’s plan</span></button><button
-                        data-view="community"><b>04</b> <span data-i18n="community">Community & reviews</span></button><button
-                        data-view="translate"><b>05</b> <span data-i18n="translator">Travel translator</span></button><button
-                        data-view="currency"><b>06</b> <span data-i18n="currency">Currency converter</span></button></div>
+                        data-view="trips"><b>02</b> <span data-i18n="myTrips">My trips</span></button><button data-view="budget"><b>03</b> <span data-i18n="budgetExpenses">Budget & expenses</span></button><button
+                        data-view="today"><b>04</b> <span data-i18n="todayPlan">Today’s plan</span></button><button
+                        data-view="community"><b>05</b> <span data-i18n="community">Community & reviews</span></button><button
+                        data-view="translate"><b>06</b> <span data-i18n="translator">Travel translator</span></button><button
+                        data-view="currency"><b>07</b> <span data-i18n="currency">Currency converter</span></button></div>
             </div>
             <div class="phone-box reveal">
                 <div class="phone">
@@ -130,10 +131,10 @@
             </div>
             <div class="contact-form">
                 <p>Have a question, a local tip, or a destination you’d love us to cover? We’re listening.</p>
-                <form id="contactForm"><input placeholder="Your name" required><input type="email"
-                        placeholder="Email address" required><textarea placeholder="Tell us what’s on your mind"
-                        required></textarea><button class="button gold">Send a note <span>→</span></button>
-                    <p id="message" class="status"></p>
+                <form id="contactForm"><input id="contactName" name="name" maxlength="100" autocomplete="name" placeholder="Your name" required><input id="contactEmail" name="email" type="email" maxlength="254" autocomplete="email"
+                        placeholder="Email address" required><textarea id="contactMessage" name="message" maxlength="3000" placeholder="Tell us what’s on your mind"
+                        required></textarea><button class="button gold" type="submit">Send a note <span>→</span></button>
+                    <p id="message" class="status" role="status" aria-live="polite"></p>
                 </form>
             </div>
         </section>
@@ -141,30 +142,40 @@
     <footer><a class="brand" href="#home"><i>✦</i> TRIPAWAY</a>
         <p>Travel slowly. Notice everything.</p><span>© 2026</span>
     </footer>
-    <dialog id="dialog"><button class="close">×</button>
+    <dialog id="dialog"><button class="close" id="closeAuth" type="button">×</button>
         <p class="kicker">YOUR TRIPAWAY</p>
-        <h2>Adventure<br><em>awaits.</em></h2><input placeholder="Email address"><input type="password"
-            placeholder="Password"><button class="button night">Sign in <span>→</span></button>
+        <h2>Adventure<br><em>awaits.</em></h2>
+        <form id="authForm">
+            <label for="authEmail">EMAIL ADDRESS</label><input id="authEmail" type="email" autocomplete="email" required placeholder="Email address">
+            <label for="authPassword">PASSWORD</label><input id="authPassword" type="password" autocomplete="current-password" minlength="8" required placeholder="At least 8 characters">
+            <button class="button night" id="authSubmit" type="submit">Sign in <span>→</span></button>
+        </form>
+        <button id="authModeToggle" class="auth-mode-toggle" type="button">New to TripAway? Create an account</button>
+        <p id="authStatus" class="status" role="status" aria-live="polite">Account features are ready to connect once Supabase is configured.</p>
     </dialog>
     <dialog id="reviewDialog">
         <button class="close" id="closeReview">×</button>
-        <p class="kicker">YOUR VERIFIED REVIEW</p>
-        <h2>Share the<br><em>moment.</em></h2>
+        <p class="kicker">YOUR COMMUNITY REVIEW</p>
+        <h2>Share your<br><em>experience.</em></h2>
         <form id="reviewForm">
             <label>PLACE VISITED<input id="reviewPlace" required value="Hawa Mahal, Jaipur"></label>
             <label>YOUR RATING<select id="reviewRating" required><option value="5">★★★★★ — Loved it</option><option value="4">★★★★☆ — Great</option><option value="3">★★★☆☆ — Good</option><option value="2">★★☆☆☆ — Needs work</option><option value="1">★☆☆☆☆ — Not for me</option></select></label>
+            <label>YOUR REVIEW<textarea id="reviewText" rows="4" maxlength="500" placeholder="What should other travellers know?" required></textarea></label>
             <div class="review-capture">
-                <video id="reviewPreview" playsinline muted></video>
-                <p id="reviewCaptureStatus">Record up to 30 seconds, or choose a video from your device.</p>
-                <div class="review-actions"><button type="button" class="button night" id="startRecording">Use camera</button><button type="button" class="button capture-stop" id="stopRecording" disabled>Stop</button><label class="button upload">Choose video<input id="reviewUpload" type="file" accept="video/*"></label></div>
+                <p>Add a video if you like. Your written review can be shared without one.</p>
+                <video id="reviewPreview" playsinline muted hidden></video>
+                <p id="reviewCaptureStatus" role="status">No video added.</p>
+                <div class="review-actions"><button type="button" class="button night" id="startRecording">Record video</button><button type="button" class="button capture-stop" id="stopRecording" disabled>Stop</button><label class="button upload">Choose video<input id="reviewUpload" type="file" accept="video/*"></label></div>
             </div>
-            <button class="button gold review-submit" type="submit">Publish review <span>→</span></button>
+            <button class="button gold review-submit" type="submit">Share review <span>→</span></button>
             <p id="reviewFormStatus" class="status" role="status"></p>
         </form>
     </dialog>
     <link rel="stylesheet" href="reviews.css">
     <link rel="stylesheet" href="community.css">
     <link rel="stylesheet" href="place-images.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-config.js"></script>
     <script src="app.js"></script>
     <script src="i18n.js"></script>
     <script src="data.js"></script>

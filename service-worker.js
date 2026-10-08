@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tripaway-shell-v1';
+const CACHE_NAME = 'tripaway-shell-v11';
 const APP_FILES = [
     './',
     './index.html',
@@ -8,6 +8,7 @@ const APP_FILES = [
     './place-images.css',
     './data.css',
     './app.js',
+    './supabase-config.js',
     './i18n.js',
     './data.js',
     './place-images.js'

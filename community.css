@@ -98,3 +98,8 @@
     margin: 7px 0 0;
     color: #42505a
 }
+
+.community-rating {
+    color: #a96d25 !important;
+    letter-spacing: .08em;
+}
